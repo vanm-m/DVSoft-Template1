@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* simplebar y damián la chupa */
+
+[data-simplebar] { position: relative; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-line-pack: start; align-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; width: inherit; height: inherit; max-width: inherit; max-height: inherit; }
+
+.simplebar-wrapper { overflow: hidden; width: inherit; height: inherit; max-width: inherit; max-height: inherit; }
+
+.simplebar-mask { direction: inherit; position: absolute; overflow: hidden; padding: 0; margin: 0; left: 0; top: 0; bottom: 0; right: 0; width: auto !important; height: auto !important; z-index: 0; }
+
+.simplebar-offset { direction: inherit !important; -webkit-box-sizing: inherit !important; box-sizing: inherit !important; resize: none !important; position: absolute; top: 0; left: 0; bottom: 0; right: 0; padding: 0; margin: 0; -webkit-overflow-scrolling: touch; }
+
+.simplebar-content { direction: inherit; -webkit-box-sizing: border-box !important; box-sizing: border-box !important; position: relative; display: block; height: 100%; /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */ width: auto; visibility: visible; overflow: scroll; /* Scroll on this element otherwise element can't have a padding applied properly */ max-width: 100%; /* Not required for horizontal scroll to trigger */ max-height: 100%; /* Needed for vertical scroll to trigger */ }
+
+.simplebar-placeholder { max-height: 100%; max-width: 100%; width: 100%; pointer-events: none; }
+
+.simplebar-height-auto-observer-wrapper { -webkit-box-sizing: inherit !important; box-sizing: inherit !important; height: 100%; width: inherit; max-width: 1px; position: relative; float: left; max-height: 1px; overflow: hidden; z-index: -1; padding: 0; margin: 0; pointer-events: none; -webkit-box-flex: inherit; -ms-flex-positive: inherit; flex-grow: inherit; -ms-flex-negative: 0; flex-shrink: 0; -ms-flex-preferred-size: 0; flex-basis: 0; }
+
+.simplebar-height-auto-observer { -webkit-box-sizing: inherit; box-sizing: inherit; display: block; opacity: 0; position: absolute; top: 0; left: 0; height: 1000%; width: 1000%; min-height: 1px; min-width: 1px; overflow: hidden; pointer-events: none; z-index: -1; }
+
+.simplebar-track { z-index: 1; position: absolute; right: 0; bottom: 0; pointer-events: none; }
+
+.simplebar-scrollbar { position: absolute; right: 2px; width: 7px; min-height: 10px; }
+
+.simplebar-scrollbar:before { position: absolute; content: ""; background: black; border-radius: 7px; left: 0; right: 0; opacity: 0; -webkit-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
+
+.simplebar-track .simplebar-scrollbar.simplebar-visible:before { /* When hovered, remove all transitions from drag handle */ opacity: 0.5; -webkit-transition: opacity 0s linear; -o-transition: opacity 0s linear; transition: opacity 0s linear; }
+
+.simplebar-track.simplebar-vertical { top: 0; width: 11px; }
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before { top: 2px; bottom: 2px; }
+
+.simplebar-track.simplebar-horizontal { left: 0; height: 11px; }
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before { height: 100%; left: 2px; right: 2px; }
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar { right: auto; left: 0; top: 2px; height: 7px; min-height: 0; min-width: 10px; width: auto; }
+
+/* MF Data */
+
+#mf_serp_modal_bg { position: absolute; z-index: 100000; height: 0; width: 100%; background-color: rgba(255, 255, 255, 0); -webkit-transition: background-color 0.3s linear; -o-transition: background-color 0.3s linear; transition: background-color 0.3s linear; top: -5%; left: 0; }
+
+.mf_serp_show_result #mf_serp_modal_bg { background-color: rgba(255, 255, 255, 0.6); height: 105%; position: fixed; }
+
+#mf_serp_modal_wrap { position: fixed; z-index: 1000000; left: 10%; top: 5%; height: 0; width: 80%; opacity: 0; display: block; background: #fff; -webkit-transition: opacity 0.3s linear; -o-transition: opacity 0.3s linear; transition: opacity 0.3s linear; -webkit-box-shadow: 0 0 20px #666; box-shadow: 0 0 20px #666; }
+
+.mf_serp_show_result #mf_serp_modal_wrap { opacity: 1; height: 90%; }
+
+#mf_serp_modal { height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+
+#mf_serp_iframe { width: 100%; height: 100% !important; border: none; display: block; }
+
+#mf_serp_modal_head { position: absolute; z-index: 2000; top: 5px; right: 5px; width: 40px; height: 40px; background-color: rgba(0, 0, 0, 0.8); cursor: pointer; display: none; }
+
+#mf_serp_modal_head:before, #mf_serp_modal_head:after { position: absolute; top: 4px; border: 1px solid #fff; height: 30px; content: ""; }
+
+#mf_serp_modal_head:before { left: 19px; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+#mf_serp_modal_head:after { right: 19px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+.mf_serp_show_result #mf_serp_modal_head { display: block; }
+
+#mf_serp_modal_head span#mf_serp_modal_close { display: none; }
+
+/* ==================================
+    body
+===================================== */
+
+body {
+     /* Evita que los caracteres se amplíen en los teléfonos inteligentes */ 
+    -webkit-text-size-adjust: 100%; 
+    /* Properties */
+    margin: 0 px;
+    padding: 15px 30px 15px 30px;
+    background-color: #1b262c;
+    font-size: 16px;
+    font: 12px/1.7 "ヒラギノ角ゴ ProN W3", 
+        Hiragino Kaku Gothic ProN, Arial, 
+        "メイリオ", Meiryo, sans-serif;
+}
+
+p {
+    color: #ffffff;
+}
+
+/* ==================================
+    HEADER
+===================================== */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color:#1b262c;
+    border-bottom: 4px solid #0c9463;
+}
+
+#hnav {
+    display: -webkit-box; 
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end; 
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center; 
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#hnav a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#hnav a:hover {
+    text-decoration: underline;
+}
