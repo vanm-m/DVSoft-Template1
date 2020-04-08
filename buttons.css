@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* Navigation Bar Search Button */
+
+.hnavSearchBtn { 
+    -webkit-transition: .2s opacity ease-in; 
+    -o-transition: .2s opacity ease-in;
+    transition: .2s opacity ease-in; 
+}
+  
+.hnavSearchBtn:hover { opacity: .6; 
+} 

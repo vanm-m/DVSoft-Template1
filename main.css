@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* simplebar y damián la chupa */
-
 [data-simplebar] { position: relative; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-line-pack: start; align-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; width: inherit; height: inherit; max-width: inherit; max-height: inherit; }
 
 .simplebar-wrapper { overflow: hidden; width: inherit; height: inherit; max-width: inherit; max-height: inherit; }
@@ -62,6 +60,44 @@
 
 #mf_serp_modal_head span#mf_serp_modal_close { display: none; }
 
+/* WRAPPER */
+
+/* :::::::::::::::::::::::::::::::
+wrapper
+::::::::::::::::::::::::::::::: */
+@media screen and (min-width: 751px) { #wrapper { padding-top: 106px; } }
+
+@media screen and (max-width: 750px) { 
+    #wrapper { 
+        padding-top: 62px; 
+    }
+    #wrapper.navOpen { 
+      width: 100%; position: fixed; left: 0; 
+    }
+    #wrapper.navOpen #nav { 
+        -webkit-transform: scaleY(1); 
+        -ms-transform: scaleY(1); 
+        transform: scaleY(1); 
+        opacity: 1; 
+    }
+    #wrapper.navOpen #smtMenuBtn i:nth-child(1) { 
+        top: 23px; -webkit-transform: rotate(45deg); 
+        -ms-transform: rotate(45deg); 
+        transform: rotate(45deg); }
+    #wrapper.navOpen #smtMenuBtn i:nth-child(2) { 
+        -webkit-transform: scale(0); 
+        -ms-transform: scale(0); 
+        transform: scale(0); }
+    #wrapper.navOpen #smtMenuBtn i:nth-child(3) {
+         top: 23px; 
+         -webkit-transform: rotate(-45deg); 
+         -ms-transform: rotate(-45deg); 
+         transform: rotate(-45deg); 
+    } 
+}
+
+  /* ================================== */
+
 /* ==================================
     body
 ===================================== */
@@ -74,9 +110,7 @@ body {
     padding: 15px 30px 15px 30px;
     background-color: #1b262c;
     font-size: 16px;
-    font: 12px/1.7 "ヒラギノ角ゴ ProN W3", 
-        Hiragino Kaku Gothic ProN, Arial, 
-        "メイリオ", Meiryo, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
@@ -97,7 +131,16 @@ p {
     border-bottom: 4px solid #0c9463;
 }
 
-#hnav {
+.headInnner { 
+    position: relative; 
+    height: 104px; 
+    padding: 21px 50px 0; 
+    max-width: 1100px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.hnav {
     display: -webkit-box; 
     display: -ms-flexbox;
     display: flex;
@@ -107,14 +150,321 @@ p {
     -webkit-box-align: center; 
     -ms-flex-align: center;
     align-items: center;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
-#hnav a {
-    font-size: 14px;
-    color: #fff;
+.hnav a {
+    font-size: 18px;
+    color: white;
     text-decoration: none;
 }
 
-#hnav a:hover {
+.hnav a:hover {
     text-decoration: underline;
 }
+
+@media screen and (min-width: 751px) { 
+    .hnavLang:hover { text-decoration: underline; } 
+}
+
+.hlogo {
+    line-height: 1;
+    margin-left: 10px;
+}
+
+.hlogo a {
+    line-height: 1;
+    display: block;
+    -webkit-transition: .2s opacity ease-in; 
+    -o-transition: .2s opacity ease-in; 
+    transition: .2s opacity ease-in; 
+}
+
+.hlogo a:hover {
+    opacity: .6;
+}
+
+@media screen and (min-width: 751px) {
+     .hlogo a { 
+        -webkit-transition: .2s opacity ease-in; 
+        -o-transition: .2s opacity ease-in; 
+        transition: .2s opacity ease-in; 
+    }
+     .hlogo a:hover { 
+        opacity: .6; 
+    } 
+}
+
+@media screen and (min-width: 751px) and (max-width: 1000px) { 
+    #header .headInnner { 
+        padding: 21px 15px 0; 
+    }
+    #header .hlogo { 
+        left: 15px; 
+    }
+    #header .hlogo img { 
+        width: 220px; 
+    } 
+}
+
+@media screen and (max-width: 750px) { 
+    #header { 
+      width: 100%; 
+      padding: 10px 15px; 
+      height: 62px; 
+      border-bottom: 4px solid #0c9463; 
+    }
+    #header .hlogo { 
+        position: absolute; 
+        top: 24px; 
+        left: 15px; 
+    }
+    #header .hlogo img { 
+        width: 150px; 
+    }
+    #header .hnav { 
+        position: absolute; 
+        right: 57px; 
+        top: 22px; 
+        z-index: 9; 
+    }
+    #header .hnavSearch { 
+        -webkit-box-flex: 0; 
+        -ms-flex: 0 0 34px; 
+        flex: 0 0 34px; 
+        width: 34px; 
+        height: 18px; 
+        margin-left: 10px; 
+    } 
+}
+
+@media screen and (max-width: 370px) { 
+    #header .hlogo { 
+        top: 25px; 
+    }
+    #header .hlogo img { 
+        width: 130px; 
+    } 
+}
+
+/* :::::::::::::::::::::::::::::::
+smtMenuBtn
+::::::::::::::::::::::::::::::: */
+@media screen and (min-width: 751px) { 
+    #smtMenuBtn { 
+        display: none; 
+    } 
+}
+
+@media screen and (max-width: 750px) { 
+    #smtMenuBtn { 
+        display: block; 
+        width: 48px; 
+        height: 48px;
+        position: absolute; 
+        top: 7px; 
+        right: 4px; 
+        z-index: 10; 
+    }
+    #smtMenuBtn i { 
+        display: block; 
+        width: 24px; 
+        height: 2px; 
+        background-color: #333333; 
+        position: absolute; 
+        right: 12px; 
+        -webkit-transition: 0.3s all cubic-bezier(0.82, 0.01, 0.3, 0.99); 
+        -o-transition: 0.3s all cubic-bezier(0.82, 0.01, 0.3, 0.99); 
+        transition: 0.3s all cubic-bezier(0.82, 0.01, 0.3, 0.99); 
+    }
+    #smtMenuBtn i:nth-child(1) { 
+        top: 16px; 
+    }
+    #smtMenuBtn i:nth-child(2) { 
+        top: 23px; 
+    }
+    #smtMenuBtn i:nth-child(3) { 
+        top: 30px; 
+    } 
+}
+
+/* :::::::::::::::::::::::::::::::
+nav
+::::::::::::::::::::::::::::::: */
+
+@media screen and (min-width: 751px) { 
+    #nav { 
+        position: absolute; 
+        right: 50px; 
+        bottom: 0; 
+    } 
+}
+
+@media screen and (min-width: 751px) and (max-width: 1000px) { 
+    #nav { 
+        right: 15px; 
+    } 
+}
+
+@media screen and (max-width: 750px) { 
+    #nav { 
+        position: fixed; 
+        z-index: 100; 
+        top: 62px; 
+        left: 0; 
+        width: 100%; 
+        height: calc(100% - 100px); 
+        overflow-y: auto; 
+        -webkit-overflow-scrolling: touch; 
+        -overflow-scrolling: touch; 
+        -webkit-transform: scaleY(0); 
+        -ms-transform: scaleY(0); 
+        transform: scaleY(0); 
+        -webkit-transform-origin: top; 
+        -ms-transform-origin: top; 
+        transform-origin: top; 
+        opacity: 0; 
+    }
+    #nav.smt { 
+        -webkit-transition: 0.3s all cubic-bezier(0.82, 0.01, 0.3, 0.99); 
+        -o-transition: 0.3s all cubic-bezier(0.82, 0.01, 0.3, 0.99); 
+        transition: 0.3s all cubic-bezier(0.82, 0.01, 0.3, 0.99); 
+    }
+    #nav .glnavIner { 
+        height: 100%; 
+        overflow-y: auto; 
+    } 
+}
+
+/* ::::::::::::::::::::::::::::
+    GLNAV
+::::::::::::::::::::::::::::::: */
+
+.glnavLink { 
+    font-weight: bold; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+.glnavIner a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.glnavItem a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 751px) { 
+    .glnav { 
+        display: -webkit-box; 
+        display: -ms-flexbox; 
+        display: flex; 
+        margin-left: 2.5em; 
+    }
+    .glnavInner { 
+        position: relative; 
+    }
+    .glnavLine { 
+        display: block; 
+        background-color: #333; 
+        height: 2px; 
+        position: absolute; 
+        bottom: 10px; 
+        left: 0; 
+        -webkit-transition: left .2s ease,-webkit-transform .2s ease; 
+        transition: left .2s ease,-webkit-transform .2s ease; 
+        -o-transition: transform .2s ease,left .2s ease; 
+        transition: transform .2s ease,left .2s ease; 
+        transition: transform .2s ease,left .2s ease, -webkit-transform .2s ease; 
+        -webkit-transform: scaleY(0); 
+        -ms-transform: scaleY(0); 
+        transform: scaleY(0); 
+        -webkit-transform-origin: bottom; 
+        -ms-transform-origin: bottom; 
+        transform-origin: bottom; 
+    }
+    .glnavLine.dis { 
+        -webkit-transform: scaleY(1); 
+        -ms-transform: scaleY(1); 
+        transform: scaleY(1); 
+    }
+    .glnavLine.current { 
+        -webkit-transform: scaleY(1); 
+        -ms-transform: scaleY(1); 
+        transform: scaleY(1); 
+    }
+    .glnavItem { 
+        margin-right: 2.5em; 
+        padding-bottom: 17px; 
+    }
+    .glnavItem.current { 
+        position: relative; 
+    }
+    .glnavItem:last-child { 
+        margin-right: 0; 
+    }
+    .glnavLink.on { 
+        color: #0c9463; 
+    } 
+}
+
+@media screen and (min-width: 751px) and (max-width: 1000px) { 
+    .glnav { 
+        margin-left: 1em; 
+    }
+    .glnavItem { 
+        margin-right: 1em; 
+    }
+    .glnavLink { 
+        font-size: 14px; 
+    } 
+}
+
+@media screen and (max-width: 750px) { 
+    .glnav { 
+        -webkit-box-shadow: 0 2px 10px #555; 
+        box-shadow: 0 2px 10px #555; 
+    }
+    .glnavLine { display: none; }
+    .glnavItem { position: relative; }
+    .glnavItem:after { 
+        content: ''; 
+        display: block; 
+        line-height: 1; 
+        background-color: #1b262c; 
+        height: 1px; 
+        width: calc( 100% - 30px); 
+        position: absolute; 
+        top: 0px; 
+        left: 15px; 
+    }
+    .glnavItem:first-child:after { 
+        content: none; 
+    }
+    .glnav span.glnavLink { 
+        position: relative; 
+    }
+    .glnav span.glnavLink:after { 
+        content: ''; 
+        display: block; 
+        width: 12px; 
+        height: 12px; 
+        background: url(/eng/assets/img/shared/icn_navToggle1.png) no-repeat center center/contain; 
+        position: absolute; 
+        right: 15px; top: 50%; 
+        margin-top: -6px; 
+    }
+    .glnav span.glnavLink.on:after { 
+        -webkit-transform: rotate(45deg); 
+        -ms-transform: rotate(45deg); 
+        transform: rotate(45deg); 
+    }
+    .glnavLink { 
+        display: block; 
+        padding: 15px 35px 15px 15px; 
+        background-color: #1b262c; 
+    } 
+}
+

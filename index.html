@@ -5,19 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>DVSOFT HOLDINGS CO., LTD.</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main_square.css" />
     <link rel="stylesheet" href="slick.css" />
 </head>
 
 <body>
 <!-- Header Start -->
-<header id="header">
-    <div class="innerHeader inner">
-        <div class="hnav">
-            <a>English</a>
+<div id="wrapper">
+    <!-- Módulo para mostrar resultados de búsqueda -->
+    <div id="mf_serp_modal_bg">
+      <div id="mf_serp_modal_wrap">
+        <div id="mf_serp_modal_head"><span id="mf_serp_modal_close">close</span></div>
+        <div id="mf_serp_modal">
+          <iframe id="mf_serp_iframe" src="about:blank"></iframe>
         </div>
+      </div>
     </div>
-</header>
+    <header id="header">
+        <div class="headInner inner">
+            <div class="hnav">
+                <a href="en/index.html">English</a>
+                <div class="hnavSearch"><i class="hnavSearchBtn"></i>
+                    <div class="mf_finder_header">
+                    <mf-search-box
+                    ajax-url="//mf2ap003.marsflag.com/square_enix__all__all/x_search.x"
+                    serp-url="//www.jp.square-enix.com/search/result.html#/"
+                    category-default=""
+                    category-csv=""
+                    doctype-hidden
+                    options-hidden
+                    imgsize-default="3"
+                    iframe="#mf_serp_iframe"
+                    submit-callback="submit_callback"
+                    :suggest-max="0"
+                    ></mf-search-box>
+                    </div>
+                </div>
+            </div>
+            <p class="hlogo">
+                <a href="index.html"><img src="img/Logo.png" alt="" width="20%"/></a>
+            </p><span id="smtMenuBtn"><i></i><i></i><i></i></span>
+        </div>
+        <nav id="nav">
+            <div class="glnavIner"><i class="glnavLine" id="glnavLine"></i>
+                <ul class="glnav">
+                    <li class="glnavItem" data-nav="Company"><a href="about.html">Sobre DVSOFT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
 <!-- Header End -->
 
 <!-- Slider-->
