@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flip-cards {
+    width:100%;
+    height: 600px;
+    background-color: #171739;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container_titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    
+}
+
+.container {  
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card-container { 
+    margin:16px;
+    color:black;
+    -webkit-perspective: 900; 
+    perspective: 900;
+    height: 250px;
+
+}
+
+.card {  
+    width: 280px;
+    height: 250px;
+    background-color:white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    -webkit-box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+
+
+}
+
+.side { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* ORDENAR LO QUE VA ADENTRO DE LAS TARJETAS */
+
+.back {
+    transform: rotateY(180deg);
+    padding: 12px;
+    background-image: radial-gradient(circle farthest-side at center bottom, #dbf039, #00917e 200%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+
+
+}
+
+.back h2 {
+    color:whitesmoke;
+    margin-top: 5px;
+
+}
+
+.contentBack {
+    color: white;
+    text-align: center;
+}
+
+.front {
+    padding: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.front h2 {
+    color: black;
+    margin-top: 5px;
+}
+
+.front img {
+    width: 120px;
+    height: 130px;
+}
+
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+
+
+}
+
+/* RESPONSIVE */
