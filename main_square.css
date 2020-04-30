@@ -301,11 +301,23 @@ smtMenuBtn
 /* :::::::::::::::::::::::::::::::
 footer
 ::::::::::::::::::::::::::::::: */
-#footer { position: relative; background-color: #1a1a1a; width: 100%; color: #171739; }
+#footer { 
+	position: relative; 
+	background-color: #1a1a1a; 
+	width: 100%; 
+	color: #171739; 
+	border-top: 2px solid #3caf68;
+	border-bottom: 2px solid #3caf68;
+}
 
 @media screen and (min-width: 751px) { #footer a:hover { text-decoration: underline; } }
 
-#footer .finner { padding-left: 15px; padding-right: 15px; }
+#footer .finner { padding-left: 15px; padding-right: 15px;}
+
+#footer .finner a {
+	color: white;
+	font-size: 24px;
+}
 
 #footer .fTitle { font-weight: bold; font-size: 18px; margin-bottom: 20px; }
 

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.footer-container {
+	display: block;
+	position: relative;
+	border-top: 2px solid #3caf68;
+	border-bottom: 2px solid #3caf68;
+	background-color: #171739;
+	align: center;
+}
+
+.logo-footer {
+	align: center;
+}
