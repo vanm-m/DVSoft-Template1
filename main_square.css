@@ -3371,7 +3371,7 @@ topKv
 
 #topKv .topKvTxt { color: #171739; }
 
-#topKv .topKvTxt .en { font-family: "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif; font-size: 26px; letter-spacing: 0; line-height: 1.5; margin-bottom: 15px; }
+#topKv .topKvTxt .en { font-family: "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif; font-size: 26px; letter-spacing: 0; line-height: 1.5; margin-bottom: 15px; color: #fff;}
 
 #topKv .topKvTxt .jp { font-size: 28px; letter-spacing: 0; font-weight: bold; line-height: 1.4; }
 
@@ -3388,17 +3388,17 @@ topKv
 
 #topKv .topKvDots li { display: inline-block; width: 12px; height: 12px; margin-left: 8px; line-height: 1; position: relative; cursor: pointer; }
 
-#topKv .topKvDots li.slick-active:after { background-color: transparent; border: 2px solid #171739; width: 12px; height: 12px; top: 0; left: 0; }
+#topKv .topKvDots li.slick-active:after { background-color: transparent; border: 2px solid #FFFFFF; width: 12px; height: 12px; top: 0; left: 0; }
 
-#topKv .topKvDots li:after { content: ''; display: block; line-height: 1; width: 8px; height: 8px; border-radius: 50%; background-color: #171739; -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; left: 2px; top: 2px; }
+#topKv .topKvDots li:after { content: ''; display: block; line-height: 1; width: 8px; height: 8px; border-radius: 50%; background-color: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; left: 2px; top: 2px; }
 
 #topKv .topKvDots button { display: block; line-height: 1; opacity: 0; width: 12px; height: 12px; position: absolute; top: 0; left: 0; }
 
-@media screen and (min-width: 751px) { #topKv { height: 667px; }
-  #topKv .topKvSlideInner { width: 100%; position: absolute; left: 0; bottom: 126px; }
-  #topKv .topKvSlide { height: 667px; }
+@media screen and (min-width: 751px) { #topKv { height: 450px; }
+  #topKv .topKvSlideInner { width: 100%; position: absolute; left: 0; bottom: 50px; }
+  #topKv .topKvSlide { height: 450px; }
   #topKv .topKvTxt { width: 100%; max-width: 1030px; padding-left: 15px; padding-right: 15px; margin-left: auto; margin-right: auto; }
-  #topKv .topKvDots { bottom: 101px; } }
+  #topKv .topKvDots { bottom: 0px; } }
 
 @media screen and (min-width: 751px) and (min-width: 1001px) { #topKv .topKvDots { right: 50%; margin-right: -503px; } }
 
