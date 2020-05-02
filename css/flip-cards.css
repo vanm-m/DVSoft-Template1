@@ -1,11 +1,7 @@
-*{
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .flip-cards {
     width:100%;
-    height: 600px;
+    height: 500px;
     background-color: #171739;
     font-family: 'Oswald', sans-serif;
 }
@@ -29,16 +25,16 @@
 
 }
 
-.card-container { 
+.card-container {
     margin:16px;
     color:black;
-    -webkit-perspective: 900; 
+    -webkit-perspective: 900;
     perspective: 900;
     height: 250px;
 
 }
 
-.card {  
+.card { 
     width: 280px;
     height: 250px;
     background-color:white;
@@ -67,7 +63,7 @@
 
 }
 
-/* ORDENAR LO QUE VA ADENTRO DE LAS TARJETAS */
+/* ORDENAR LO QUE VA ADENTRO DE LAS TARJETAS  #009cde, #003087 */
 
 .back {
     transform: rotateY(180deg);
