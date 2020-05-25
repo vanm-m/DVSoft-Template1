@@ -1,0 +1,413 @@
+html {
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+/* Toda la seccion */
+.main-contact {
+    padding: 20px;
+    background-color:#171739;
+    margin:0;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* side => Foto lado izquierdo */
+.side {
+    width: 50%;
+    height: 80%;
+    display: flex;
+}
+
+.side img {
+    width: 500px;
+    height: 500px;
+}
+
+/* Div que encierra todo el formulario */
+.container {
+    display: flex;
+    width: 50%;
+    height: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+
+}
+
+/* toda la seccion form */ 
+
+.contact-content-colum {
+    padding: 8% 10% 10%;
+    background-color: #f6f5f5;
+    border-radius: 20px;
+}
+
+.contact-content-colum .text-left {
+    font-size: 23px;
+    color: #262d2d;
+}
+
+/* div => titulo del input + el input */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+
+/* inputs de info */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 12px 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 35px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+    outline: 1px solid greenyellow;
+}
+
+input {
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: -internal-light-dark-color(white, black);
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+}
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, input {
+    overflow: visible;
+}
+
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 13px;
+    padding-left: 8px;
+}
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+/* budget */
+
+/*Posicionamiento y diseño de precios*/
+.rolesk label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 13px;
+    padding-left: 0;
+    color: #8e8080;
+    width: 20%;
+    margin: 0!important;
+    float: left;
+}
+
+.budget .roles .role, .budget .roles .role1 {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    margin: 0 auto!important;
+    text-align: left;
+    float: left;
+    padding: 0;
+}
+/* lineas entre botones de budget*/
+.budget .roles .role:before {
+    background: #d4d2d2;
+    width: 100%;
+    height: 4px;
+    content: '';
+    position: absolute;
+    top: 39%;
+    left: 35px;
+    z-index: 8;
+}
+
+.role {
+    margin-right: 80px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.ml-3, .mx-3 {
+    margin-left: 1rem!important;
+}
+
+/* budget botones*/
+input[type=radio] {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: 0;
+    border: 2px solid #c4c4c4;
+    cursor: pointer;
+}
+
+.budget .roles input[type=radio]:before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 2px auto;
+    border-radius: 50%;
+}
+
+.budget .roles input[type=radio] {
+    -webkit-appearance: none;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    outline: 0;
+    border: 2px solid#c4c4c4;
+    background: #f7f7f7;
+    position: relative;
+    z-index: 9;
+}
+
+
+/* Apretar botons de budget y como nos conoscite */
+.budget .roles input[type=radio]:checked {
+    border-color: #592f8b;
+}
+
+input[type=radio]:checked {
+    border-color: #592f8b;
+    background-image: radial-gradient(circle farthest-side at center bottom, #dbf039, #00917e 200%);
+}
+
+
+
+.budget .roles input[type=radio]:checked:before {
+    background-image: radial-gradient(circle farthest-side at center bottom, #dbf039, #00917e 200%);
+}
+
+
+input[type=radio], input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+
+/* Tell us about your project  */
+textarea {  
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textarea;
+    background-color: -internal-light-dark-color(white, black);
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    border-image: initial;
+    padding: 2px;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+/*Como nos conociste*/
+.form-check-label {
+    margin-bottom: 0;
+}
+
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+}
+
+.form-check-inline {
+    min-width: 94px;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.form-check-inline {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
+    margin-right: .75rem;
+}
+
+.form-check-inline .form-check-input {
+    position: static;
+    margin-top: 0;
+    margin-right: .3125rem;
+    margin-left: 0;
+}
+
+
+/* ACEPTAR NOTICIAS */
+
+.form-check.updates {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.checkbox {
+    padding-left: 0;
+}
+
+.checkbox span {
+    font-size: 12px;
+}
+
+/* SEND BOTTON */
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+/* background: #de475a; */ 
+
+.sumit-btn{
+    background-image: radial-gradient(circle farthest-side at center bottom, #dbf039, #00917e 200%);
+    min-width: 100%;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 85px;
+    padding: 13px 30px;
+    font-size: 18px;
+    position: relative;
+}
+
+.btn{
+    background-color:transparent;
+    color:black;
+    width: 100%;
+    display: inline-block;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+button {
+    border-radius: 0;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.sumit-btn img {
+    position: absolute;
+    right: 30px;
+    top: 8px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+/* SUCCESS MESSAGE */
+.success-message {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+}
+
+.success-message h1 {
+    font-size: 35px;
+    display:block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success-message a{
+    display:block;
+    padding: 10px 30px;
+    background-color: indigo;
+    text-decoration: none;
+    color: white;
+}
+
+.success-message a:hover {
+    background-color: teal;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail</title>
+
+    <!--STYLE CSS-->
+    <link rel="stylesheet" href="form.css"/>
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script src="JS/script.js"></script>
+
+    <!--PHP-->
+    <link href="/Form-DVS/enviar.php" />
+
+</head>
+<body>
+    <!--MAIL PARA DVSOFT -->
+        
+<section class="main-contact">
+    <div class="side">
+        <img src="./Img/dvsoft-logo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="contact-content-colum">
+            <h2 class="text-left"><strong> Cuentanos sobre tu proyecto </strong></h2>
+            <form method="post" action="mail/mobile-sendmail.php">
+                <div class="form-group">
+                    <label>Nombre de tu Empresa*</label>
+                    <input type="text" name="name" class="form-control" placeholder="Space X" required>
+                </div>
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="ejemplo@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Numero de Celular*</label>
+                    <input type="text" class="form-control" name="phone" placeholder="+ 56 9" required>
+                </div>
+                <div class="budget">
+                    <label>Presupuesto aproximado</label>
+                    <div class="roles">
+                        <label class="role" for="one">
+                            <input type="radio" name="role" value="25k-50k" id="one">
+                        </label>
+                        <label class="role ml-3" for="two">
+                            <input type="radio" name="role" value="50k-80k" id="two" checked>
+                        </label>
+                        <label class="role ml-3" for="three">
+                            <input type="radio" name="role" value="80k-150k" id="three">
+                        </label>
+                        <label class="role ml-3" for="four">
+                            <input type="radio" name="role" value="150k-250k" id="four">
+                        </label>
+                        <label class="role1 ml-3" for="five">
+                            <input type="radio" name="role" value="250k+" id="five">
+                        </label>
+                    </div>
+                    <div class="rolesk">
+                        <label class="role1" for="one">
+                            50K-100K
+                        </label>
+                        <label class="role1 ml-3" for="two">
+                            100K-150K
+                        </label>
+                        <label class="role1 ml-3" for="three">
+                            150K-200K
+                        </label>
+                        <label class="role1 ml-3" for="four">
+                            200K-250K
+                        </label>
+                        <label class="role1 ml-3" for="five">
+                            250K+
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Cuentanos sobre tu proyecto</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <h6>¿Como nos conociste?</h6>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options" id="inlineRadio1" value="Google">
+                        <label class="form-check-label radio-label" for="inlineRadio1">Google</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options" id="inlineRadio2" value="Social">
+                        <label class="form-check-label radio-label" for="inlineRadio2">Facebook</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options" id="inlineRadio3" value="Clutch.io">
+                        <label class="form-check-label radio-label" for="inlineRadio3">Instagram</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options" id="inlineRadio4" value="Events">
+                        <label class="form-check-label radio-label" for="inlineRadio4">Linkedin</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options" id="inlineRadio5" value="Recomendation">
+                        <label class="form-check-label radio-label" for="inlineRadio5">Recomendacion</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options" id="inlineRadio6" value="Word-of-mouth">
+                        <label class="form-check-label radio-label" for="inlineRadio6">Eventos</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options" id="inlineRadio7" value="Other" checked="checked">
+                        <label class="form-check-label radio-label" for="inlineRadio7">Otra</label>
+                    </div>
+                    <div class="form-check updates checkbox">
+                        <input type="checkbox" name="vehicle" value="vehicle"> <span>No - No me gustaria recibir actualizacions sobre DVsoft</span>
+                    </div>
+                </div>
+                <div class="sumit-btn">
+                    <button name="submit" type="submit" class="btn btn-submit">
+                       ENVIAR
+                        <img src="./Img/sendemail.png" alt="Mobile Application Development">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+    
+</body>
+</html>
